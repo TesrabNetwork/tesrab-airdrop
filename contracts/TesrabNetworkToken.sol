@@ -7,7 +7,7 @@ contract ERC20Interface {
   function ERC20Interface(){}
 }
 
-contract KyberGenesisToken is Ownable {
+contract TesrabNetworkToken is Ownable {
   string  public  constant name     = "Kyber Genesis Token";
   string  public  constant symbol   = "KGT";
   uint    public  constant decimals = 0;
