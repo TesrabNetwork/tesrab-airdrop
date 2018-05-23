@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 import "./Ownable.sol";
-import "./KyberGenesisToken.sol";
+import "./TesrabNetworkToken.sol";
 
 contract KyberAirDrop is Ownable {
   uint public numDrops;
