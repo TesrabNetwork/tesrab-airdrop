@@ -1,4 +1,4 @@
-pragma solidity ^0.4.15;
+pragma solidity ^0.4.24;
 
 contract Token {
     /* This is a slight change to the ERC20 base standard.
