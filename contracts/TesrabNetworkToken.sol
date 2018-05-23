@@ -15,7 +15,7 @@ contract TesrabNetworkToken is Ownable {
   uint                   public totalSupply = 0;
   mapping(address=>uint) public balanceOf;
 
-  function KyberGenesisToken( address minter ) {
+  function TesrabNetworkToken( address minter ) {
     transferOwnership(minter);
   }
 
