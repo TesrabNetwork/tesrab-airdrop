@@ -1,12 +1,12 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.20;
 import "./Ownable.sol";
 import "./TesrabNetworkToken.sol";
 
-contract KyberAirDrop is Ownable {
+contract TesrabAirDrop is Ownable {
   uint public numDrops;
   uint public dropAmount;
 
-  function KyberAirDrop( address dropper ) {
+  function TesrabAirDrop( address dropper ) {
     transferOwnership(dropper);
   }
 
@@ -26,8 +26,8 @@ contract KyberAirDrop is Ownable {
       }
     }
 
-    if( kgt ) {
-      kgtToken.mint(recipients);
+    if( tnt ) {
+      tntToken.mint(recipients);
     }
 
     numDrops += recipients.length;
@@ -35,12 +35,12 @@ contract KyberAirDrop is Ownable {
   }
 
   function tranferMinterOwnership( KyberGenesisToken kgtToken, address newOwner ) onlyOwner {
-    kgtToken.transferOwnership(newOwner);
+    tntToken.transferOwnership(newOwner);
   }
 
   function emergencyERC20Drain( ERC20Interface token, uint amount ) {
       // callable by anyone
-      address kyberMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
-      token.transfer( kyberMultisig, amount );
+      address tesrabMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
+      token.transfer( tesrabMultisig, amount );
   }
 }
