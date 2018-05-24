@@ -13,7 +13,7 @@ contract TesrabNetworkToken is Ownable {
   string  public  constant symbol   = "TNT";
   uint    public  constant decimals = 0;
 
-  uint                   public totalSupply = 0;
+  uint                   public totalSupply = 10000;
   mapping(address=>uint) public balanceOf;
 
   function TesrabNetworkToken( address minter ) {
@@ -52,7 +52,7 @@ contract TesrabNetworkToken is Ownable {
   function emergencyERC20Drain( ERC20Interface token, uint amount ){
       // callable by anyone
       address tesrabMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
-      token.transfer( kyberMultisig, amount );
+      token.transfer( tesrabMultisig, amount );
   }
 
 
