@@ -1,15 +1,16 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.20;
 import "./Ownable.sol";
 
 contract ERC20Interface {
-  function transferFrom(address _from, address _to, uint _value) returns (bool){}
-  function transfer(address _to, uint _value) returns (bool){}
-  function ERC20Interface(){}
+
+    function transferFrom(address _from, address _to, uint _value) returns public (bool){}
+    function transfer(address _to, uint _value) returns (bool){}
+    function ERC20Interface(){}
 }
 
 contract TesrabNetworkToken is Ownable {
-  string  public  constant name     = "Kyber Genesis Token";
-  string  public  constant symbol   = "KGT";
+  string  public  constant name     = "Tesrab Network Token";
+  string  public  constant symbol   = "TNT";
   uint    public  constant decimals = 0;
 
   uint                   public totalSupply = 0;
