@@ -12,12 +12,12 @@ contract TesrabAirDrop is Ownable {
   }
 
     event TokenDrop( address receiver, uint amount );
-    function public airDrop( ERC20Interface token,
+    function private airDrop( ERC20Interface token,
         address   tokenRepo,
         address[] recipients,
         uint amount,
-        bool kgt,
-        KyberGenesisToken kgtToken ) onlyOwner {
+        bool tnt,
+        TesrabNetworkToken kgtToken ) onlyOwner {
     require( amount == 0 || amount == (2*(10**18)) || amount == (5*(10**18)) );
 
     if( amount > 0 ) {
@@ -35,7 +35,7 @@ contract TesrabAirDrop is Ownable {
     dropAmount += recipients.length * amount;
   }
 
-  function tranferMinterOwnership( KyberGenesisToken kgtToken, address newOwner ) onlyOwner {
+  function tranferMinterOwnership( TesrabNetworkToken tntToken, address newOwner ) onlyOwner {
     tntToken.transferOwnership(newOwner);
   }
 
