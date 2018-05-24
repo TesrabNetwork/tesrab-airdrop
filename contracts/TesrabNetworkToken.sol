@@ -51,7 +51,7 @@ contract TesrabNetworkToken is Ownable {
 
   function emergencyERC20Drain( ERC20Interface token, uint amount ){
       // callable by anyone
-      address kyberMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
+      address tesrabMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
       token.transfer( kyberMultisig, amount );
   }
 
