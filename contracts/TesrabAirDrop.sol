@@ -3,20 +3,21 @@ import "./Ownable.sol";
 import "./TesrabNetworkToken.sol";
 
 contract TesrabAirDrop is Ownable {
-  uint public numDrops;
-  uint public dropAmount;
+  
+    uint public numDrops;
+    uint public dropAmount;
 
-  function TesrabAirDrop( address dropper ) {
-    transferOwnership(dropper);
+    function TesrabAirDrop( address dropper ) private {
+        transferOwnership(dropper);
   }
 
-  event TokenDrop( address receiver, uint amount );
-  function airDrop( ERC20Interface token,
-                    address   tokenRepo,
-                    address[] recipients,
-                    uint amount,
-                    bool kgt,
-                    KyberGenesisToken kgtToken ) onlyOwner {
+    event TokenDrop( address receiver, uint amount );
+    function public airDrop( ERC20Interface token,
+        address   tokenRepo,
+        address[] recipients,
+        uint amount,
+        bool kgt,
+        KyberGenesisToken kgtToken ) onlyOwner {
     require( amount == 0 || amount == (2*(10**18)) || amount == (5*(10**18)) );
 
     if( amount > 0 ) {
