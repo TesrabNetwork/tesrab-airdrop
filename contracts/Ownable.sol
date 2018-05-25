@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.20;
 
 
 /**
@@ -7,25 +7,25 @@ pragma solidity ^0.4.24;
  * functions, this simplifies the implementation of "user permissions".
  */
 contract Ownable {
-  address public owner;
+    address public owner;
 
 
   /**
    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
    * account.
    */
-  function Ownable() {
-    owner = msg.sender;
-  }
+    constructor(Ownable) public {
+        owner = msg.sender;
+    }
 
 
   /**
    * @dev Throws if called by any account other than the owner.
    */
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
 
   /**
