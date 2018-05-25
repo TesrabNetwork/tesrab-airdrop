@@ -47,11 +47,11 @@ var airdropABI =[
         "type": "uint256"
       },
       {
-        "name": "kgt",
+        "name": "tnw",
         "type": "bool"
       },
       {
-        "name": "kgtToken",
+        "name": "tnwToken",
         "type": "address"
       }
     ],
@@ -90,7 +90,7 @@ var airdropABI =[
     "constant": false,
     "inputs": [
       {
-        "name": "kgtToken",
+        "name": "tnwToken",
         "type": "address"
       },
       {
