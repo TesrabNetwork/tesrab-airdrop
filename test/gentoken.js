@@ -1,8 +1,8 @@
 var Token = artifacts.require("./StandardToken.sol");
 var BigNumber = require('bignumber.js');
 var Helpers = require('./helpers.js');
-var GenToken = artifacts.require("./KyberGenesisToken.sol");
-var AirDrop = artifacts.require("./KyberAirDrop.sol");
+var GenToken = artifacts.require("./TesrabNetworkToken.sol");
+var AirDrop = artifacts.require("./TesrabAirDrop.sol");
 
 var owner;
 var airDropOwner;
