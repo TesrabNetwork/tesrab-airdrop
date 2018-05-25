@@ -1,8 +1,8 @@
 var Token = artifacts.require("./StandardToken.sol");
 var BigNumber = require('bignumber.js');
 var Helpers = require('./helpers.js');
-var GenToken = artifacts.require("./KyberGenesisToken.sol");
-var AirDrop = artifacts.require("./KyberAirDrop.sol");
+var GenToken = artifacts.require("./TesrabNetworkToken.sol");
+var AirDrop = artifacts.require("./TesrabAirDrop.sol");
 
 var tokenOwner;
 var airDropOwner;
@@ -202,7 +202,7 @@ contract('gen token', function(accounts) {
     });
   });
 
-  it("change kgt owner from non owner", function() {
+  it("change tnw owner from non owner", function() {
     return airDrop.tranferMinterOwnership(genToken.address,
                                           accounts[9],
                                           {from:nonOwner} ).then(function(){
@@ -213,7 +213,7 @@ contract('gen token', function(accounts) {
     });
   });
 
-  it("change kgt owner from owner", function() {
+  it("change tnw owner from owner", function() {
     var newOwner = accounts[5];
     return airDrop.tranferMinterOwnership(genToken.address,
                                           newOwner,
