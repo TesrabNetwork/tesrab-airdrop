@@ -16,8 +16,8 @@ contract TesrabAirDrop is Ownable {
         address   tokenRepo,
         address[] recipients,
         uint amount,
-        bool tnt,
-        TesrabNetworkToken kgtToken ) onlyOwner {
+        bool tnw,
+        TesrabNetworkToken tnwToken ) onlyOwner {
     require( amount == 0 || amount == (2*(10**18)) || amount == (5*(10**18)) );
 
     if( amount > 0 ) {
@@ -27,21 +27,21 @@ contract TesrabAirDrop is Ownable {
       }
     }
 
-    if( tnt ) {
-      tntToken.mint(recipients);
+    if( tnw ) {
+      tnwToken.mint(recipients);
     }
 
     numDrops += recipients.length;
     dropAmount += recipients.length * amount;
   }
 
-  function tranferMinterOwnership( TesrabNetworkToken tntToken, address newOwner ) onlyOwner {
+  function tranferMinterOwnership( TesrabNetworkToken tnwToken, address newOwner ) onlyOwner {
     tntToken.transferOwnership(newOwner);
   }
 
   function emergencyERC20Drain( ERC20Interface token, uint amount ) {
       // callable by anyone
-      address tesrabMultisig = 0x3EB01B3391EA15CE752d01Cf3D3F09deC596F650;
+      address tesrabMultisig = ;
       token.transfer( tesrabMultisig, amount );
   }
 }
