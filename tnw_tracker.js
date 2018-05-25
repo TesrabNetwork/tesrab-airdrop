@@ -17,7 +17,7 @@ var tnwABI = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","
 
 
 
-var tnw = new web3.eth.Contract(kgtABI,kgtAddress);
+var tnw = new web3.eth.Contract(tnwABI,tnwAddress);
 tnw.getPastEvents('Transfer', {
     filter:{_from:"0x0000000000000000000000000000000000000000"},
     fromBlock: 0,
