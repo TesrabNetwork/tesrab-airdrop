@@ -1,2 +1,2 @@
 # tesrab airdrop
-This repository consists of Tesrab Network Token (TNT) smart contract
+This repository consists of Tesrab Network Token (TNW) airdrop smart contract 
