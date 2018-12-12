@@ -1,5 +1,5 @@
 var BigNumber = require('bignumber.js');
-var GenToken = artifacts.require("./TesrabNetworkToken.sol");
+var GenToken = artifacts.require("./TesraCoin.sol");
 var AirDrop = artifacts.require("./TesradexAirDrop.sol");
 
 var dropper = "0xcBAC9e86E0B7160F1a8E4835ad01Dd51c514afce";
